@@ -1,0 +1,17 @@
+---
+title: "STA 304 A1 Q3 g)"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## R Markdown
+
+Note that the mean of the sample mean when the population is sampled without replacement equals the population mean. While the mean of the sample mean when the population is sampled with replacement is closed but not equals to the population mean. The reason is: in terms of the sample mean when the population is sampled without replacement, we can consider the sample mean as a finite population, and theoretically, the population mean of the sample mean equals the population mean. While considering the sample mean when the population is sampled with replacement, the sample mean and the population it sampled from can be treat as infinite population. So mean of 250000 samples from the sample mean is just the sample mean of an infinite population, which is just an estimator. As a result, it is acceptable that the mean of the sample means is not exactly the population mean.
+
+In terms of the variance, the variance of the sample mean when the population is sampled without (1.92) replacement is less than the variance of the sample mean when the population is sampled with replacement(2.47). To explain this, we need to consider the difference in the sampling method. When samples are sampled without replacement, the variance of the sample mean is: ((σ^2)/n)((N−n)/N−1), in this case, N=10, n=3, so the variance of the sample mean is (7/27)(σ^2). In terms of the sample mean when the population is sampled with replacement, according to CLT, the variance of the sample mean is tend to be closed to (1/n)(σ^2), in this case, is (1/2)(σ^2). Since 7/27<1/2, so the variance of the sample mean when the population is sampled without replacement is less than the variance of the sample mean when the population is sampled with replacement.
+
+
